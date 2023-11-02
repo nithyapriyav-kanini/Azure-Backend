@@ -1,0 +1,705 @@
+2023-08-24 00:34:09.565 +05:30 [INF] Now listening on: http://localhost:5114
+2023-08-24 00:34:09.712 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-24 00:34:09.715 +05:30 [INF] Hosting environment: Development
+2023-08-24 00:34:09.716 +05:30 [INF] Content root path: D:\Figma\demo\OpenPositionsSolution\OpenPositionsApp\
+2023-08-24 00:34:13.287 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger - -
+2023-08-24 00:34:13.469 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2023-08-24 00:34:13.714 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger - - - 0 - - 433.4476ms
+2023-08-24 00:34:14.804 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1334.9892ms
+2023-08-24 00:34:15.133 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/swagger-ui-bundle.js - -
+2023-08-24 00:34:15.206 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/swagger-ui.css - -
+2023-08-24 00:34:15.271 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2023-08-24 00:34:15.273 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/swagger-ui-standalone-preset.js - -
+2023-08-24 00:34:15.274 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2023-08-24 00:34:15.294 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 20.1513ms
+2023-08-24 00:34:15.324 +05:30 [INF] The file /swagger-ui-bundle.js was not modified
+2023-08-24 00:34:15.324 +05:30 [INF] The file /swagger-ui.css was not modified
+2023-08-24 00:34:15.324 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2023-08-24 00:34:15.329 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 195.8652ms
+2023-08-24 00:34:15.330 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/swagger-ui.css - - - 304 - text/css 123.3960ms
+2023-08-24 00:34:15.331 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 58.4103ms
+2023-08-24 00:34:15.876 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 604.5597ms
+2023-08-24 00:34:16.189 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2023-08-24 00:34:16.603 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 414.0173ms
+2023-08-24 00:34:36.597 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/api/Position/All - -
+2023-08-24 00:34:36.616 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-08-24 00:34:36.645 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp)'
+2023-08-24 00:34:36.705 +05:30 [INF] Route matched with {action = "GetAllPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]]] GetAllPosition() on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 00:34:41.206 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 00:34:44.150 +05:30 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+2023-08-24 00:34:44.541 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.605 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.625 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.630 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.636 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.642 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.647 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.654 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.660 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.665 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.671 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.677 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.682 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.688 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.695 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.700 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.705 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.712 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.718 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.726 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.734 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.741 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.749 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.756 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.763 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.771 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.789 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.797 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:34:44.841 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[OpenPositionsApp.Models.DTO.OpenPositionDTO, OpenPositionsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-24 00:34:44.873 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp) in 8151.4987ms
+2023-08-24 00:34:44.879 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp)'
+2023-08-24 00:34:44.891 +05:30 [INF] HTTP GET /api/Position/All responded 200 in 8261.1704 ms
+2023-08-24 00:34:44.912 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/api/Position/All - - - 200 - application/json;+charset=utf-8 8314.8613ms
+2023-08-24 00:35:44.364 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197
+2023-08-24 00:35:44.371 +05:30 [INF] CORS policy execution successful.
+2023-08-24 00:35:44.375 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 00:35:44.405 +05:30 [INF] Route matched with {action = "AddPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] AddPosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 00:35:44.550 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 00:35:44.559 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:35:44.571 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:35:45.116 +05:30 [INF] Executed DbCommand (128ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OpenPositions] ([Domain], [EducationalQual], [Experience], [JobDescription], [LocationId], [ReqSkills], [RoleName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [PositionId]
+FROM [OpenPositions]
+WHERE @@ROWCOUNT = 1 AND [PositionId] = scope_identity();
+2023-08-24 00:35:45.262 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:35:45.270 +05:30 [INF] Executing CreatedResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-24 00:35:45.275 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp) in 865.889ms
+2023-08-24 00:35:45.278 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 00:35:45.281 +05:30 [INF] HTTP POST /api/Position/Add responded 201 in 911.9710 ms
+2023-08-24 00:35:45.286 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197 - 201 - application/json;+charset=utf-8 921.7238ms
+2023-08-24 00:36:07.549 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94
+2023-08-24 00:36:07.561 +05:30 [INF] CORS policy execution successful.
+2023-08-24 00:36:07.566 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 00:36:07.573 +05:30 [INF] Route matched with {action = "RemovePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] RemovePosition(OpenPositionsApp.Models.DTO.PositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 00:36:07.687 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 00:36:08.150 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-24 00:36:08.222 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [OpenPositions]
+WHERE [PositionId] = @p0;
+SELECT @@ROWCOUNT;
+2023-08-24 00:36:08.252 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:36:08.259 +05:30 [INF] Executing OkObjectResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-24 00:36:08.263 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp) in 686.5301ms
+2023-08-24 00:36:08.269 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 00:36:08.273 +05:30 [INF] HTTP DELETE /api/Position responded 200 in 712.7680 ms
+2023-08-24 00:36:08.277 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94 - 200 - application/json;+charset=utf-8 727.1324ms
+2023-08-24 00:36:16.986 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/api/Position/AllLocations - -
+2023-08-24 00:36:16.989 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp)'
+2023-08-24 00:36:17.001 +05:30 [INF] Route matched with {action = "GetAllLocations", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[System.String]]] GetAllLocations() on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 00:36:17.012 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 00:36:17.023 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 00:36:17.031 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-24 00:36:17.035 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp) in 28.8665ms
+2023-08-24 00:36:17.040 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp)'
+2023-08-24 00:36:17.042 +05:30 [INF] HTTP GET /api/Position/AllLocations responded 200 in 52.8993 ms
+2023-08-24 00:36:17.047 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/api/Position/AllLocations - - - 200 - application/json;+charset=utf-8 61.3113ms
+2023-08-24 11:05:39.987 +05:30 [INF] Now listening on: http://localhost:5114
+2023-08-24 11:05:40.132 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-24 11:05:40.134 +05:30 [INF] Hosting environment: Development
+2023-08-24 11:05:40.135 +05:30 [INF] Content root path: D:\Figma\demo\OpenPositionsSolution\OpenPositionsApp\
+2023-08-24 11:05:42.522 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2023-08-24 11:05:42.522 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger - -
+2023-08-24 11:05:43.242 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger - - - 0 - - 721.5092ms
+2023-08-24 11:05:45.115 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 2602.6914ms
+2023-08-24 11:05:45.227 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2023-08-24 11:05:45.237 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2023-08-24 11:05:45.293 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 66.0501ms
+2023-08-24 11:05:45.613 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/favicon-32x32.png - -
+2023-08-24 11:05:45.667 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-08-24 11:05:45.670 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/favicon-32x32.png - - - 0 628 image/png 56.8911ms
+2023-08-24 11:05:46.259 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1021.5878ms
+2023-08-24 11:05:46.463 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2023-08-24 11:05:46.933 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 470.4557ms
+2023-08-24 11:06:23.750 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 196
+2023-08-24 11:06:23.770 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-08-24 11:06:23.780 +05:30 [INF] CORS policy execution successful.
+2023-08-24 11:06:23.800 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 11:06:23.880 +05:30 [INF] Route matched with {action = "AddPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] AddPosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 11:06:26.514 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 11:06:28.424 +05:30 [INF] Executed DbCommand (116ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:06:28.969 +05:30 [ERR] Location not available
+2023-08-24 11:06:28.986 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-08-24 11:06:29.002 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp) in 5109.7258ms
+2023-08-24 11:06:29.008 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 11:06:29.019 +05:30 [INF] HTTP POST /api/Position/Add responded 404 in 5235.8970 ms
+2023-08-24 11:06:29.047 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 196 - 404 - text/plain;+charset=utf-8 5297.1756ms
+2023-08-24 11:06:40.329 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197
+2023-08-24 11:06:40.334 +05:30 [INF] CORS policy execution successful.
+2023-08-24 11:06:40.337 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 11:06:40.339 +05:30 [INF] Route matched with {action = "AddPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] AddPosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 11:06:40.378 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 11:06:40.415 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:06:40.427 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:06:41.004 +05:30 [INF] Executed DbCommand (94ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OpenPositions] ([Domain], [EducationalQual], [Experience], [JobDescription], [LocationId], [ReqSkills], [RoleName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [PositionId]
+FROM [OpenPositions]
+WHERE @@ROWCOUNT = 1 AND [PositionId] = scope_identity();
+2023-08-24 11:06:41.180 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:06:41.187 +05:30 [INF] Executing CreatedResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-24 11:06:41.198 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp) in 854.0068ms
+2023-08-24 11:06:41.201 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 11:06:41.204 +05:30 [INF] HTTP POST /api/Position/Add responded 201 in 870.2388 ms
+2023-08-24 11:06:41.207 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197 - 201 - application/json;+charset=utf-8 877.4861ms
+2023-08-24 11:06:53.780 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 199
+2023-08-24 11:06:53.785 +05:30 [INF] CORS policy execution successful.
+2023-08-24 11:06:53.789 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 11:06:53.793 +05:30 [INF] Route matched with {action = "AddPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] AddPosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 11:06:53.839 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-24 11:06:53.851 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp) in 47.7515ms
+2023-08-24 11:06:53.857 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 11:06:53.860 +05:30 [INF] HTTP POST /api/Position/Add responded 400 in 77.6224 ms
+2023-08-24 11:06:53.867 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 199 - 400 - application/problem+json;+charset=utf-8 87.0009ms
+2023-08-24 11:07:14.427 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 93
+2023-08-24 11:07:14.430 +05:30 [INF] CORS policy execution successful.
+2023-08-24 11:07:14.434 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 11:07:14.447 +05:30 [INF] Route matched with {action = "RemovePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] RemovePosition(OpenPositionsApp.Models.DTO.PositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 11:07:14.568 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 11:07:15.053 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-24 11:07:15.401 +05:30 [ERR] Null value occurred!!
+2023-08-24 11:07:15.403 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-08-24 11:07:15.405 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp) in 950.6866ms
+2023-08-24 11:07:15.408 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 11:07:15.409 +05:30 [INF] HTTP DELETE /api/Position responded 400 in 979.8341 ms
+2023-08-24 11:07:15.413 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 93 - 400 - text/plain;+charset=utf-8 985.4606ms
+2023-08-24 11:07:56.333 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5114/api/Position application/json 198
+2023-08-24 11:07:56.345 +05:30 [INF] CORS policy execution successful.
+2023-08-24 11:07:56.347 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp)'
+2023-08-24 11:07:56.354 +05:30 [INF] Route matched with {action = "UpdatePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] UpdatePosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 11:07:56.366 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 11:07:56.376 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:07:56.560 +05:30 [ERR] Location not available
+2023-08-24 11:07:56.562 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-08-24 11:07:56.564 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp) in 203.8035ms
+2023-08-24 11:07:56.567 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp)'
+2023-08-24 11:07:56.568 +05:30 [INF] HTTP PUT /api/Position responded 404 in 223.2358 ms
+2023-08-24 11:07:56.570 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5114/api/Position application/json 198 - 404 - text/plain;+charset=utf-8 237.5403ms
+2023-08-24 11:08:14.060 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/api/Position/All - -
+2023-08-24 11:08:14.064 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp)'
+2023-08-24 11:08:14.076 +05:30 [INF] Route matched with {action = "GetAllPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]]] GetAllPosition() on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 11:08:14.100 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 11:08:14.126 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+2023-08-24 11:08:14.157 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.176 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.183 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.193 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.200 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.209 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.215 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.225 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.231 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.239 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.246 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.254 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.264 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.297 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.307 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.319 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.329 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.340 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.351 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.361 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.370 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.381 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.392 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.400 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.411 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.421 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.431 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.441 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.449 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:14.456 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[OpenPositionsApp.Models.DTO.OpenPositionDTO, OpenPositionsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-24 11:08:14.461 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp) in 375.3319ms
+2023-08-24 11:08:14.465 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp)'
+2023-08-24 11:08:14.468 +05:30 [INF] HTTP GET /api/Position/All responded 200 in 403.7145 ms
+2023-08-24 11:08:14.474 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/api/Position/All - - - 200 - application/json;+charset=utf-8 413.6631ms
+2023-08-24 11:08:52.487 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/api/Position/AllLocations - -
+2023-08-24 11:08:52.506 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp)'
+2023-08-24 11:08:52.512 +05:30 [INF] Route matched with {action = "GetAllLocations", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[System.String]]] GetAllLocations() on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 11:08:52.525 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 11:08:52.536 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:08:52.555 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-24 11:08:52.558 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp) in 37.7879ms
+2023-08-24 11:08:52.561 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp)'
+2023-08-24 11:08:52.567 +05:30 [INF] HTTP GET /api/Position/AllLocations responded 200 in 61.6542 ms
+2023-08-24 11:08:52.572 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/api/Position/AllLocations - - - 200 - application/json;+charset=utf-8 85.5180ms
+2023-08-24 11:46:07.748 +05:30 [INF] Now listening on: http://localhost:5114
+2023-08-24 11:46:07.868 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-24 11:46:07.871 +05:30 [INF] Hosting environment: Development
+2023-08-24 11:46:07.873 +05:30 [INF] Content root path: D:\Figma\demo\OpenPositionsSolution\OpenPositionsApp\
+2023-08-24 11:46:09.242 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2023-08-24 11:46:10.346 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1112.3397ms
+2023-08-24 11:46:10.515 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2023-08-24 11:46:10.521 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2023-08-24 11:46:10.585 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 64.1161ms
+2023-08-24 11:46:10.723 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 208.1091ms
+2023-08-24 11:46:10.900 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2023-08-24 11:46:11.188 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 288.5492ms
+2023-08-24 11:46:24.399 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 196
+2023-08-24 11:46:24.419 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-08-24 11:46:24.431 +05:30 [INF] CORS policy execution successful.
+2023-08-24 11:46:24.454 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 11:46:24.537 +05:30 [INF] Route matched with {action = "AddPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] AddPosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 11:46:27.167 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 11:46:29.267 +05:30 [INF] Executed DbCommand (143ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 11:46:29.903 +05:30 [ERR] Location not available
+2023-08-24 11:46:29.934 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-08-24 11:46:29.955 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp) in 5402.1931ms
+2023-08-24 11:46:29.962 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 11:46:29.982 +05:30 [INF] HTTP POST /api/Position/Add responded 404 in 5546.7054 ms
+2023-08-24 11:46:30.013 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 196 - 404 - text/plain;+charset=utf-8 5613.8734ms
+2023-08-24 16:14:49.457 +05:30 [INF] Now listening on: http://localhost:5114
+2023-08-24 16:14:49.670 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-24 16:14:49.673 +05:30 [INF] Hosting environment: Development
+2023-08-24 16:14:49.675 +05:30 [INF] Content root path: D:\Figma\demo\OpenPositionsSolution\OpenPositionsApp\
+2023-08-24 16:14:52.203 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2023-08-24 16:14:53.995 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1827.2016ms
+2023-08-24 16:14:54.047 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2023-08-24 16:14:54.236 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2023-08-24 16:14:54.287 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 238.9101ms
+2023-08-24 16:14:54.649 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 413.6444ms
+2023-08-24 16:14:54.876 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2023-08-24 16:14:55.309 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 432.5346ms
+2023-08-24 16:16:16.618 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197
+2023-08-24 16:16:16.642 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-08-24 16:16:16.653 +05:30 [INF] CORS policy execution successful.
+2023-08-24 16:16:16.673 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 16:16:16.758 +05:30 [INF] Route matched with {action = "AddPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] AddPosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:16:21.405 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:16:24.430 +05:30 [INF] Executed DbCommand (121ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:16:24.746 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:16:25.379 +05:30 [INF] Executed DbCommand (97ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OpenPositions] ([Domain], [EducationalQual], [Experience], [JobDescription], [LocationId], [ReqSkills], [RoleName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [PositionId]
+FROM [OpenPositions]
+WHERE @@ROWCOUNT = 1 AND [PositionId] = scope_identity();
+2023-08-24 16:16:25.564 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:16:25.593 +05:30 [INF] Executing CreatedResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-24 16:16:25.620 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp) in 8849.2146ms
+2023-08-24 16:16:25.627 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 16:16:25.637 +05:30 [INF] HTTP POST /api/Position/Add responded 201 in 8983.7795 ms
+2023-08-24 16:16:25.658 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197 - 201 - application/json;+charset=utf-8 9039.8732ms
+2023-08-24 16:16:34.311 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 195
+2023-08-24 16:16:34.316 +05:30 [INF] CORS policy execution successful.
+2023-08-24 16:16:34.319 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 16:16:34.322 +05:30 [INF] Route matched with {action = "AddPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] AddPosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:16:34.361 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:16:34.371 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:16:34.730 +05:30 [ERR] Location not available
+2023-08-24 16:16:34.732 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-08-24 16:16:34.734 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp) in 405.8988ms
+2023-08-24 16:16:34.737 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-24 16:16:34.739 +05:30 [INF] HTTP POST /api/Position/Add responded 404 in 423.0966 ms
+2023-08-24 16:16:34.741 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 195 - 404 - text/plain;+charset=utf-8 430.4048ms
+2023-08-24 16:16:58.795 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 93
+2023-08-24 16:16:58.805 +05:30 [INF] CORS policy execution successful.
+2023-08-24 16:16:58.809 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 16:16:58.818 +05:30 [INF] Route matched with {action = "RemovePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] RemovePosition(OpenPositionsApp.Models.DTO.PositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:16:58.978 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:16:59.389 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-24 16:16:59.748 +05:30 [ERR] Null value occurred!!
+2023-08-24 16:16:59.751 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-08-24 16:16:59.755 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp) in 925.2706ms
+2023-08-24 16:16:59.758 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 16:16:59.760 +05:30 [INF] HTTP DELETE /api/Position responded 400 in 961.6813 ms
+2023-08-24 16:16:59.764 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 93 - 400 - text/plain;+charset=utf-8 968.2486ms
+2023-08-24 16:17:06.465 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94
+2023-08-24 16:17:06.467 +05:30 [INF] CORS policy execution successful.
+2023-08-24 16:17:06.469 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 16:17:06.473 +05:30 [INF] Route matched with {action = "RemovePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] RemovePosition(OpenPositionsApp.Models.DTO.PositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:17:06.482 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:17:06.497 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-24 16:17:06.829 +05:30 [ERR] Null value occurred!!
+2023-08-24 16:17:06.830 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-08-24 16:17:06.832 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp) in 352.0336ms
+2023-08-24 16:17:06.836 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 16:17:06.839 +05:30 [INF] HTTP DELETE /api/Position responded 400 in 371.4356 ms
+2023-08-24 16:17:06.842 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94 - 400 - text/plain;+charset=utf-8 376.7526ms
+2023-08-24 16:17:12.560 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94
+2023-08-24 16:17:12.562 +05:30 [INF] CORS policy execution successful.
+2023-08-24 16:17:12.563 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 16:17:12.566 +05:30 [INF] Route matched with {action = "RemovePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] RemovePosition(OpenPositionsApp.Models.DTO.PositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:17:12.573 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:17:12.581 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-24 16:17:12.936 +05:30 [ERR] Null value occurred!!
+2023-08-24 16:17:12.938 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-08-24 16:17:12.940 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp) in 368.861ms
+2023-08-24 16:17:12.946 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 16:17:12.948 +05:30 [INF] HTTP DELETE /api/Position responded 400 in 386.8018 ms
+2023-08-24 16:17:12.954 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94 - 400 - text/plain;+charset=utf-8 393.9807ms
+2023-08-24 16:17:19.796 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94
+2023-08-24 16:17:19.799 +05:30 [INF] CORS policy execution successful.
+2023-08-24 16:17:19.801 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 16:17:19.804 +05:30 [INF] Route matched with {action = "RemovePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] RemovePosition(OpenPositionsApp.Models.DTO.PositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:17:19.812 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:17:19.823 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-24 16:17:20.179 +05:30 [ERR] Null value occurred!!
+2023-08-24 16:17:20.180 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-08-24 16:17:20.184 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp) in 374.0589ms
+2023-08-24 16:17:20.188 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 16:17:20.191 +05:30 [INF] HTTP DELETE /api/Position responded 400 in 392.6304 ms
+2023-08-24 16:17:20.195 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94 - 400 - text/plain;+charset=utf-8 399.3845ms
+2023-08-24 16:17:36.984 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/api/Position/All - -
+2023-08-24 16:17:36.986 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp)'
+2023-08-24 16:17:36.992 +05:30 [INF] Route matched with {action = "GetAllPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]]] GetAllPosition() on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:17:37.003 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:17:37.016 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+2023-08-24 16:17:37.049 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.064 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.072 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.080 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.087 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.091 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.098 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.105 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.110 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.117 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.122 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.128 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.135 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.140 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.146 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.152 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.158 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.164 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.171 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.179 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.188 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.194 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.203 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.212 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.219 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.227 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.234 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.240 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.245 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.251 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:37.256 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[OpenPositionsApp.Models.DTO.OpenPositionDTO, OpenPositionsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-24 16:17:37.259 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp) in 264.0271ms
+2023-08-24 16:17:37.262 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp)'
+2023-08-24 16:17:37.264 +05:30 [INF] HTTP GET /api/Position/All responded 200 in 278.3495 ms
+2023-08-24 16:17:37.269 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/api/Position/All - - - 200 - application/json;+charset=utf-8 285.4243ms
+2023-08-24 16:17:53.504 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94
+2023-08-24 16:17:53.506 +05:30 [INF] CORS policy execution successful.
+2023-08-24 16:17:53.508 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 16:17:53.509 +05:30 [INF] Route matched with {action = "RemovePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] RemovePosition(OpenPositionsApp.Models.DTO.PositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:17:53.518 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:17:53.532 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-24 16:17:53.583 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [OpenPositions]
+WHERE [PositionId] = @p0;
+SELECT @@ROWCOUNT;
+2023-08-24 16:17:53.605 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:17:53.610 +05:30 [INF] Executing OkObjectResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-24 16:17:53.613 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp) in 96ms
+2023-08-24 16:17:53.616 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-24 16:17:53.618 +05:30 [INF] HTTP DELETE /api/Position responded 200 in 111.9583 ms
+2023-08-24 16:17:53.621 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94 - 200 - application/json;+charset=utf-8 117.0247ms
+2023-08-24 16:18:11.381 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5114/api/Position application/json 199
+2023-08-24 16:18:11.383 +05:30 [INF] CORS policy execution successful.
+2023-08-24 16:18:11.385 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp)'
+2023-08-24 16:18:11.393 +05:30 [INF] Route matched with {action = "UpdatePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] UpdatePosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:18:11.402 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:18:11.411 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:18:11.652 +05:30 [ERR] Location not available
+2023-08-24 16:18:11.653 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-08-24 16:18:11.655 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp) in 257.7149ms
+2023-08-24 16:18:11.658 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp)'
+2023-08-24 16:18:11.661 +05:30 [INF] HTTP PUT /api/Position responded 404 in 277.2290 ms
+2023-08-24 16:18:11.664 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5114/api/Position application/json 199 - 404 - text/plain;+charset=utf-8 282.4606ms
+2023-08-24 16:18:28.032 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5114/api/Position application/json 197
+2023-08-24 16:18:28.033 +05:30 [INF] CORS policy execution successful.
+2023-08-24 16:18:28.034 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp)'
+2023-08-24 16:18:28.035 +05:30 [INF] Route matched with {action = "UpdatePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] UpdatePosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:18:28.041 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:18:28.050 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:18:28.056 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:18:28.067 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-24 16:18:28.098 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [OpenPositions] SET [LocationId] = @p0
+WHERE [PositionId] = @p1;
+SELECT @@ROWCOUNT;
+2023-08-24 16:18:28.110 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:18:28.115 +05:30 [INF] Executing OkObjectResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-24 16:18:28.117 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp) in 77.2375ms
+2023-08-24 16:18:28.119 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp)'
+2023-08-24 16:18:28.120 +05:30 [INF] HTTP PUT /api/Position responded 200 in 87.3316 ms
+2023-08-24 16:18:28.125 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5114/api/Position application/json 197 - 200 - application/json;+charset=utf-8 93.4877ms
+2023-08-24 16:21:13.420 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/api/Position/AllLocations - -
+2023-08-24 16:21:13.434 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp)'
+2023-08-24 16:21:13.451 +05:30 [INF] Route matched with {action = "GetAllLocations", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[System.String]]] GetAllLocations() on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-24 16:21:13.466 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-24 16:21:13.492 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-24 16:21:13.513 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-24 16:21:13.518 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp) in 58.9583ms
+2023-08-24 16:21:13.521 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp)'
+2023-08-24 16:21:13.525 +05:30 [INF] HTTP GET /api/Position/AllLocations responded 200 in 91.2746 ms
+2023-08-24 16:21:13.528 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/api/Position/AllLocations - - - 200 - application/json;+charset=utf-8 108.2001ms

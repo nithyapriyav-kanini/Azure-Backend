@@ -1,0 +1,587 @@
+2023-08-23 12:47:23.360 +05:30 [INF] Now listening on: http://localhost:5114
+2023-08-23 12:47:23.584 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-23 12:47:23.587 +05:30 [INF] Hosting environment: Development
+2023-08-23 12:47:23.591 +05:30 [INF] Content root path: D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\
+2023-08-23 12:47:26.671 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger - -
+2023-08-23 12:47:26.671 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2023-08-23 12:47:27.057 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger - - - 0 - - 389.6409ms
+2023-08-23 12:47:27.938 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 1277.8648ms
+2023-08-23 12:47:28.027 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2023-08-23 12:47:28.031 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2023-08-23 12:47:28.039 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 12.1075ms
+2023-08-23 12:47:28.277 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 246.4038ms
+2023-08-23 12:47:28.282 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/favicon-32x32.png - -
+2023-08-23 12:47:28.324 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-08-23 12:47:28.326 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/favicon-32x32.png - - - 0 628 image/png 44.6753ms
+2023-08-23 12:47:28.427 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2023-08-23 12:47:28.722 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 294.9604ms
+2023-08-23 12:48:51.152 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197
+2023-08-23 12:48:51.175 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-08-23 12:48:51.185 +05:30 [INF] CORS policy execution successful.
+2023-08-23 12:48:51.206 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-23 12:48:51.285 +05:30 [INF] Route matched with {action = "AddPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] AddPosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 12:48:54.743 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 12:50:03.128 +05:30 [ERR] An error occurred using the connection to database 'KaniniOpenPositions' on server 'MITHRA'.
+2023-08-23 12:50:03.289 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'OpenPositionsApp.Models.OpenPositionContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023-08-23 12:50:03.839 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp) in 72534.1283ms
+2023-08-23 12:50:03.859 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-23 12:50:03.874 +05:30 [ERR] HTTP POST /api/Position/Add responded 500 in 72687.0288 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at OpenPositionsApp.Adapter.LocationFetching.LocId(String name) in D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\Adapter\LocationFetching.cs:line 48
+   at OpenPositionsApp.Services.PositionService.Add(OpenPositionDTO item) in D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\Services\PositionService.cs:line 31
+   at OpenPositionsApp.Controllers.PositionController.AddPosition(OpenPositionDTO position) in D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\Controllers\PositionController.cs:line 42
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023-08-23 12:50:03.996 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at OpenPositionsApp.Adapter.LocationFetching.LocId(String name) in D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\Adapter\LocationFetching.cs:line 48
+   at OpenPositionsApp.Services.PositionService.Add(OpenPositionDTO item) in D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\Services\PositionService.cs:line 31
+   at OpenPositionsApp.Controllers.PositionController.AddPosition(OpenPositionDTO position) in D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\Controllers\PositionController.cs:line 42
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023-08-23 12:50:04.116 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197 - 500 - text/plain;+charset=utf-8 72964.4426ms
+2023-08-23 12:52:32.959 +05:30 [INF] Now listening on: http://localhost:5114
+2023-08-23 12:52:33.084 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-23 12:52:33.088 +05:30 [INF] Hosting environment: Development
+2023-08-23 12:52:33.094 +05:30 [INF] Content root path: D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\
+2023-08-23 12:52:34.268 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2023-08-23 12:52:35.171 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 914.6627ms
+2023-08-23 12:52:35.257 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2023-08-23 12:52:35.278 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2023-08-23 12:52:35.290 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 33.2701ms
+2023-08-23 12:52:35.411 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 137.8619ms
+2023-08-23 12:52:35.656 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2023-08-23 12:52:36.087 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 430.6842ms
+2023-08-23 12:53:00.901 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 92
+2023-08-23 12:53:00.918 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-08-23 12:53:00.931 +05:30 [INF] CORS policy execution successful.
+2023-08-23 12:53:00.949 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-23 12:53:01.015 +05:30 [INF] Route matched with {action = "RemovePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] RemovePosition(OpenPositionsApp.Models.DTO.PositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 12:53:04.083 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 12:54:21.255 +05:30 [INF] Now listening on: http://localhost:5114
+2023-08-23 12:54:21.373 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-23 12:54:21.375 +05:30 [INF] Hosting environment: Development
+2023-08-23 12:54:21.377 +05:30 [INF] Content root path: D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\
+2023-08-23 12:54:22.293 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2023-08-23 12:54:23.104 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 818.1911ms
+2023-08-23 12:54:23.184 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2023-08-23 12:54:23.189 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2023-08-23 12:54:23.215 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 25.6647ms
+2023-08-23 12:54:23.305 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 120.8318ms
+2023-08-23 12:54:23.586 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2023-08-23 12:54:23.880 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 293.7971ms
+2023-08-23 15:47:07.336 +05:30 [INF] Now listening on: http://localhost:5114
+2023-08-23 15:47:07.424 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-23 15:47:07.426 +05:30 [INF] Hosting environment: Development
+2023-08-23 15:47:07.427 +05:30 [INF] Content root path: D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\
+2023-08-23 15:47:09.271 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2023-08-23 15:47:09.903 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 635.7519ms
+2023-08-23 15:47:09.966 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2023-08-23 15:47:09.977 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2023-08-23 15:47:09.985 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 18.5025ms
+2023-08-23 15:47:10.072 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 94.3835ms
+2023-08-23 15:47:10.249 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2023-08-23 15:47:10.446 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 197.1791ms
+2023-08-23 15:48:31.089 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197
+2023-08-23 15:48:31.102 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-08-23 15:48:31.108 +05:30 [INF] CORS policy execution successful.
+2023-08-23 15:48:31.122 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-23 15:48:31.179 +05:30 [INF] Route matched with {action = "AddPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] AddPosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 15:48:32.893 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 15:48:34.180 +05:30 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:48:34.384 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:48:34.872 +05:30 [INF] Executed DbCommand (183ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OpenPositions] ([Domain], [EducationalQual], [Experience], [JobDescription], [LocationId], [ReqSkills], [RoleName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [PositionId]
+FROM [OpenPositions]
+WHERE @@ROWCOUNT = 1 AND [PositionId] = scope_identity();
+2023-08-23 15:48:34.981 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:48:35.002 +05:30 [INF] Executing CreatedResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-23 15:48:35.021 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp) in 3832.7428ms
+2023-08-23 15:48:35.025 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-23 15:48:35.035 +05:30 [INF] HTTP POST /api/Position/Add responded 201 in 3925.1457 ms
+2023-08-23 15:48:35.050 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197 - 201 - application/json;+charset=utf-8 3961.7196ms
+2023-08-23 15:49:09.760 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/api/Position/All - -
+2023-08-23 15:49:09.764 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp)'
+2023-08-23 15:49:09.770 +05:30 [INF] Route matched with {action = "GetAllPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]]] GetAllPosition() on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 15:49:09.789 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 15:49:09.817 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+2023-08-23 15:49:09.832 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.842 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.846 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.850 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.854 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.858 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.862 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.866 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.870 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.873 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.877 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.881 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.885 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.888 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.893 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.897 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.901 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.904 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.908 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.913 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.917 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.920 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.925 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.930 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.934 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.938 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.943 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.946 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.950 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:49:09.953 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[OpenPositionsApp.Models.DTO.OpenPositionDTO, OpenPositionsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-23 15:49:09.955 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp) in 182.1076ms
+2023-08-23 15:49:09.958 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp)'
+2023-08-23 15:49:09.960 +05:30 [INF] HTTP GET /api/Position/All responded 200 in 197.0300 ms
+2023-08-23 15:49:09.962 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/api/Position/All - - - 200 - application/json;+charset=utf-8 201.9022ms
+2023-08-23 15:50:59.409 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/api/Position/AllLocations - -
+2023-08-23 15:50:59.418 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp)'
+2023-08-23 15:50:59.423 +05:30 [INF] Route matched with {action = "GetAllLocations", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[System.String]]] GetAllLocations() on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 15:50:59.484 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 15:50:59.491 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:50:59.496 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-23 15:50:59.499 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp) in 72.5532ms
+2023-08-23 15:50:59.501 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp)'
+2023-08-23 15:50:59.502 +05:30 [INF] HTTP GET /api/Position/AllLocations responded 200 in 85.8719 ms
+2023-08-23 15:50:59.504 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/api/Position/AllLocations - - - 200 - application/json;+charset=utf-8 95.3097ms
+2023-08-23 15:51:20.663 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5114/api/Position application/json 200
+2023-08-23 15:51:20.674 +05:30 [INF] CORS policy execution successful.
+2023-08-23 15:51:20.675 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp)'
+2023-08-23 15:51:20.679 +05:30 [INF] Route matched with {action = "UpdatePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] UpdatePosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 15:51:20.686 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 15:51:20.692 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:51:20.696 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:51:20.957 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-23 15:51:20.964 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:51:20.982 +05:30 [INF] Executing OkObjectResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-23 15:51:20.985 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp) in 302.0604ms
+2023-08-23 15:51:20.986 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp)'
+2023-08-23 15:51:20.987 +05:30 [INF] HTTP PUT /api/Position responded 200 in 314.0515 ms
+2023-08-23 15:51:20.990 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5114/api/Position application/json 200 - 200 - application/json;+charset=utf-8 326.3517ms
+2023-08-23 15:51:22.455 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5114/api/Position application/json 200
+2023-08-23 15:51:22.457 +05:30 [INF] CORS policy execution successful.
+2023-08-23 15:51:22.458 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp)'
+2023-08-23 15:51:22.460 +05:30 [INF] Route matched with {action = "UpdatePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] UpdatePosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 15:51:22.463 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 15:51:22.468 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:51:22.474 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:51:22.484 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-23 15:51:22.489 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:51:22.492 +05:30 [INF] Executing OkObjectResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-23 15:51:22.494 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp) in 31.5224ms
+2023-08-23 15:51:22.496 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.UpdatePosition (OpenPositionsApp)'
+2023-08-23 15:51:22.497 +05:30 [INF] HTTP PUT /api/Position responded 200 in 40.5008 ms
+2023-08-23 15:51:22.500 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5114/api/Position application/json 200 - 200 - application/json;+charset=utf-8 44.6344ms
+2023-08-23 15:51:46.856 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94
+2023-08-23 15:51:46.858 +05:30 [INF] CORS policy execution successful.
+2023-08-23 15:51:46.859 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-23 15:51:46.865 +05:30 [INF] Route matched with {action = "RemovePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] RemovePosition(OpenPositionsApp.Models.DTO.PositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 15:51:46.875 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 15:51:46.880 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-23 15:51:47.051 +05:30 [INF] Executed DbCommand (141ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [OpenPositions]
+WHERE [PositionId] = @p0;
+SELECT @@ROWCOUNT;
+2023-08-23 15:51:47.065 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 15:51:47.069 +05:30 [INF] Executing OkObjectResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-23 15:51:47.071 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp) in 202.1352ms
+2023-08-23 15:51:47.073 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-23 15:51:47.074 +05:30 [INF] HTTP DELETE /api/Position responded 200 in 216.5695 ms
+2023-08-23 15:51:47.076 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94 - 200 - application/json;+charset=utf-8 220.0794ms
+2023-08-23 16:00:58.155 +05:30 [INF] Now listening on: http://localhost:5114
+2023-08-23 16:00:58.227 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-23 16:00:58.228 +05:30 [INF] Hosting environment: Development
+2023-08-23 16:00:58.229 +05:30 [INF] Content root path: D:\Kanini Login\OpenPositionsSolution\OpenPositionsSolution\OpenPositionsApp\
+2023-08-23 16:00:59.219 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2023-08-23 16:00:59.686 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 471.6144ms
+2023-08-23 16:00:59.712 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2023-08-23 16:00:59.722 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2023-08-23 16:00:59.728 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 16.0218ms
+2023-08-23 16:00:59.781 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.3542ms
+2023-08-23 16:00:59.928 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2023-08-23 16:01:00.123 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 194.8751ms
+2023-08-23 16:01:18.276 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197
+2023-08-23 16:01:18.289 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-08-23 16:01:18.296 +05:30 [INF] CORS policy execution successful.
+2023-08-23 16:01:18.307 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-23 16:01:18.355 +05:30 [INF] Route matched with {action = "AddPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] AddPosition(OpenPositionsApp.Models.DTO.OpenPositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 16:01:19.849 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 16:01:20.991 +05:30 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:21.190 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:21.567 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OpenPositions] ([Domain], [EducationalQual], [Experience], [JobDescription], [LocationId], [ReqSkills], [RoleName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [PositionId]
+FROM [OpenPositions]
+WHERE @@ROWCOUNT = 1 AND [PositionId] = scope_identity();
+2023-08-23 16:01:21.680 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:21.700 +05:30 [INF] Executing CreatedResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-23 16:01:21.720 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp) in 3354.1907ms
+2023-08-23 16:01:21.727 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.AddPosition (OpenPositionsApp)'
+2023-08-23 16:01:21.734 +05:30 [INF] HTTP POST /api/Position/Add responded 201 in 3436.2442 ms
+2023-08-23 16:01:21.748 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5114/api/Position/Add application/json 197 - 201 - application/json;+charset=utf-8 3471.9288ms
+2023-08-23 16:01:35.618 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/api/Position/All - -
+2023-08-23 16:01:35.621 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp)'
+2023-08-23 16:01:35.627 +05:30 [INF] Route matched with {action = "GetAllPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]]] GetAllPosition() on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 16:01:35.667 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 16:01:35.687 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+2023-08-23 16:01:35.703 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.713 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.719 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.724 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.728 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.731 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.735 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.739 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.743 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.747 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.751 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.757 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.762 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.766 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.772 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.777 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.781 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.785 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.790 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.795 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.798 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.802 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.807 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.812 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.815 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.819 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.824 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.828 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.832 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:35.835 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[OpenPositionsApp.Models.DTO.OpenPositionDTO, OpenPositionsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-23 16:01:35.838 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp) in 207.2091ms
+2023-08-23 16:01:35.840 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllPosition (OpenPositionsApp)'
+2023-08-23 16:01:35.842 +05:30 [INF] HTTP GET /api/Position/All responded 200 in 220.8992 ms
+2023-08-23 16:01:35.844 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/api/Position/All - - - 200 - application/json;+charset=utf-8 226.2979ms
+2023-08-23 16:01:50.781 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/api/Position/AllLocations - -
+2023-08-23 16:01:50.785 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp)'
+2023-08-23 16:01:50.791 +05:30 [INF] Route matched with {action = "GetAllLocations", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[System.String]]] GetAllLocations() on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 16:01:50.857 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 16:01:50.863 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:01:50.870 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-23 16:01:50.872 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp) in 78.4006ms
+2023-08-23 16:01:50.874 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.GetAllLocations (OpenPositionsApp)'
+2023-08-23 16:01:50.876 +05:30 [INF] HTTP GET /api/Position/AllLocations responded 200 in 92.5518 ms
+2023-08-23 16:01:50.878 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/api/Position/AllLocations - - - 200 - application/json;+charset=utf-8 96.0576ms
+2023-08-23 16:02:12.436 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94
+2023-08-23 16:02:12.443 +05:30 [INF] CORS policy execution successful.
+2023-08-23 16:02:12.444 +05:30 [INF] Executing endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-23 16:02:12.450 +05:30 [INF] Route matched with {action = "RemovePosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OpenPositionsApp.Models.DTO.OpenPositionDTO]] RemovePosition(OpenPositionsApp.Models.DTO.PositionDTO) on controller OpenPositionsApp.Controllers.PositionController (OpenPositionsApp).
+2023-08-23 16:02:12.462 +05:30 [INF] Entity Framework Core 6.0.0 initialized 'OpenPositionContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-08-23 16:02:12.725 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[PositionId], [o].[Domain], [o].[EducationalQual], [o].[Experience], [o].[JobDescription], [o].[LocationId], [o].[ReqSkills], [o].[RoleName]
+FROM [OpenPositions] AS [o]
+WHERE [o].[PositionId] = @__key_0
+2023-08-23 16:02:12.862 +05:30 [INF] Executed DbCommand (93ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [OpenPositions]
+WHERE [PositionId] = @p0;
+SELECT @@ROWCOUNT;
+2023-08-23 16:02:12.878 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LocationId], [l].[LocationName]
+FROM [Locations] AS [l]
+2023-08-23 16:02:12.881 +05:30 [INF] Executing OkObjectResult, writing value of type 'OpenPositionsApp.Models.DTO.OpenPositionDTO'.
+2023-08-23 16:02:12.883 +05:30 [INF] Executed action OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp) in 430.3012ms
+2023-08-23 16:02:12.885 +05:30 [INF] Executed endpoint 'OpenPositionsApp.Controllers.PositionController.RemovePosition (OpenPositionsApp)'
+2023-08-23 16:02:12.886 +05:30 [INF] HTTP DELETE /api/Position responded 200 in 443.1524 ms
+2023-08-23 16:02:12.889 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5114/api/Position application/json 94 - 200 - application/json;+charset=utf-8 453.2119ms
